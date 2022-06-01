@@ -15,33 +15,33 @@
         <img src="../assets/img/logo.png" alt="Logo NewTab">
     </header>
     <div class="menu">
-        <a href="../index.html">Listagem</a>
+        <a id="goHome" href="../index.html">Listagem</a>
         <a href="./form.html">Cadastrar</a>
     </div>
     <section>
-        <form class="formulario">
+        <form class="formulario" onsubmit="testaFormulario(event);">
             <div class="linha-formulario">
                 <label class="label-grande" for="name">Nome:</label>
                 <input name="name" id="name" required type="text" />
             </div>
             <div class="linha-formulario">
-                <label class="label-grande" for="phone">Telefone:</label>
-                <input name="phone" id="phone" required type="text" />
+                <label class="label-grande" for="tel">Telefone:</label>
+                <input onkeypress="testaTelefone(event)" onfocus="this.value =''" name="tel" id="tel" required type="text" />
             </div>
             <div class="linha-formulario xp-line" style="display: flex;">
                 <label class="label-grande">Experiência Prévia:</label>
                     <div>
-                        <input type="radio" name="xp" id="xp-yes" />
+                        <input type="radio" name="xp" id="xp-yes" value="true"/>
                         <label for="xp-yes">Sim</label>
                         <br>
-                        <input type="radio" name="xp" id="xp-no" />
+                        <input type="radio" name="xp" id="xp-no" value="false"/>
                         <label for="xp-no">Não</label>
                     </div>
             </div>
-
             <input type="submit" value="Salvar" />
         </form>
     </section>
+    <script src="../assets/js/form.js"></script>
 </body>
 
 </html>
