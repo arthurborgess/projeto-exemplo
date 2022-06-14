@@ -22,11 +22,11 @@
         <form class="formulario" onsubmit="testaFormulario(event);">
             <div class="linha-formulario">
                 <label class="label-grande" for="name">Nome:</label>
-                <input name="name" id="name" required type="text" />
+                <input name="name" id="name" required type="text" autocomplete="off"/>
             </div>
             <div class="linha-formulario">
                 <label class="label-grande" for="tel">Telefone:</label>
-                <input onkeypress="testaTelefone(event)" onfocus="this.value =''" name="tel" id="tel" required type="text" />
+                <input onkeypress="testaTelefone(event)" onfocus="this.value =''" name="tel" id="tel" required type="text" autocomplete="off"/>
             </div>
             <div class="linha-formulario xp-line" style="display: flex;">
                 <label class="label-grande">Experiência Prévia:</label>
